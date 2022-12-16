@@ -3,11 +3,11 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 
-import About from "../components/home/About";
-import Banner from "../components/home/Banner";
-import Contact from "../components/home/Contact";
+import About from "../components/home/about";
+import Banner from "../components/home/banner";
+import Contact from "../components/home/contact";
 import FeaturedProperties from "../components/home/featured-properties";
-import Testimonials from "../components/home/Testimonials";
+import Testimonials from "../components/home/testimonials";
 
 const inter = Inter({ subsets: ["latin"] });
 
