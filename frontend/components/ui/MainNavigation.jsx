@@ -3,6 +3,7 @@ import * as React from "react";
 import Image from "next/image";
 
 import AppBar from "@mui/material/AppBar";
+import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
@@ -69,7 +70,7 @@ const DrawerAppBar = (props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box>
+    <Container maxWidth="lg">
       <CssBaseline />
       <HideOnScroll {...props}>
         <Box sx={{ display: "flex" }}>
@@ -123,7 +124,7 @@ const DrawerAppBar = (props) => {
           </Box>
         </Box>
       </HideOnScroll>
-    </Box>
+    </Container>
   );
 };
 
