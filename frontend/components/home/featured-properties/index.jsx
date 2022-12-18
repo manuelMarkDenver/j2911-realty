@@ -58,7 +58,7 @@ const FeaturedProperties = () => {
           />
           <Avatar
             alt="Carousel Image 2"
-            src="/assets/images/featured-properties/carousel-3.jpg"
+            src="/assets/images/featured-properties/carousel-5.jpg"
             sx={{ width: 300, height: 300 }}
             onClick={handleOpen}
           />
@@ -83,15 +83,11 @@ const FeaturedProperties = () => {
               <p className="legend">Legend 1</p>
             </div>
             <div>
-              <img src="assets/images/featured-properties/carousel-3.jpg" />
+              <img src="assets/images/featured-properties/carousel-5.jpg" />
               <p className="legend">Legend 2</p>
             </div>
             <div>
               <img src="assets/images/featured-properties/carousel-4.jpg" />
-              <p className="legend">Legend 3</p>
-            </div>
-            <div>
-              <img src="assets/images/featured-properties/carousel-5.jpg" />
               <p className="legend">Legend 3</p>
             </div>
           </Carousel>
