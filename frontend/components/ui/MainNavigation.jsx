@@ -48,6 +48,11 @@ const DrawerAppBar = (props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const textColor = {
+    color: "red"
+};
+
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -55,10 +60,10 @@ const DrawerAppBar = (props) => {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} color="black" />
+              <ListItemText disableTypography primaryTypographyProps={{ style: textColor }}  primary={<Typography>{item}</Typography>} />
             </ListItemButton>
           </ListItem>
         ))}
