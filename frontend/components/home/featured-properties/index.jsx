@@ -37,7 +37,7 @@ const FeaturedProperties = () => {
       sx={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
-        padding: "30px 0",
+        padding: "100px 0",
       }}
     >
       <Typography variant="h2" textAlign="center">Featured Properties</Typography>

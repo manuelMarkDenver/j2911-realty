@@ -1,32 +1,57 @@
-import { Container, Typography } from "@mui/material";
+import { Box, Container, Typography, Stack } from "@mui/material";
+import contactBg from "../../../public/assets/images/flower-pink-bg.png";
 
 const Contact = () => {
   return (
-    <Container sx={{ height: "auto", padding: "100px 30px"}}>
-      <Typography variant="h2">My Story</Typography>
-      <br/><br/>
-      <Typography variant="h4">
-        Brenda Hernandez is a real estate investor which excels in customer
-        service, sales, event planning, and hard work. This coupled with focus
-        and determination has allowed her to
-      </Typography>
-
-      <br/><br/>
-      <Typography variant="h4">
-        After 23 years in corporate she retired early from her management
-        position and now dedicates 100% of her focus building and hosting her
-        short-term rental business. Her positive attitude and exceptional
-        customer support serves to help her thrive in this industry with a
-        successful 85% occupancy rate and over $113,000 in revenue year to date,
-        on track to gross well over $125,000 figures by end of year.
-      </Typography>
-
-      <br/><br/>
-      <Typography variant="h4">
-        Brenda’s goals; continue to expand her short-term rental portfolio and
-        grow her STVR consulting business.
-      </Typography>
-    </Container>
+    <Box
+      sx={{
+        backgroundImage: `url(${contactBg.src})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        height: { md: "100vh" },
+      }}
+    >
+      <Container
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+          height: "auto",
+          padding: "100px",
+        }}
+      >
+        <Typography variant="h2" mb={5}>Connect With Us</Typography>
+        <Box
+          sx={{
+            borderRadius: "50%",
+            border: "10px pink solid",
+            width: "400px",
+            height: "400px",
+            overflow: "hidden",
+            backgroundColor: "#fff",
+            justifyContent: "center",
+            alignitems: "center",
+            display: "flex",
+          }}
+        >
+          <Stack
+            direction="column"
+            sx={{
+              justifyContent: "center",
+              alignitems: "center",
+              display: "flex",
+              height: "100%",
+              textAlign: "center",
+            }}
+          >
+            <Typography variant="h5">36 Jennnings Way. Westport,MA 02790</Typography>
+            <Typography variant="h5">blhernandez0923@gmail.com</Typography>
+            <Typography variant="h5">774.888.8571</Typography>
+          </Stack>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 
