@@ -43,7 +43,11 @@ const FeaturedProperties = () => {
         padding: "100px 0",
       }}
     >
-      <Typography variant="h2" sx={{ fontSize: {md: "5em"} }}textAlign="center" className={Rockness.className}>
+      <Typography
+        variant="h2"
+        sx={{ fontSize: { md: "5em" }, fontFamily: "Rockness, Arial, Roboto" }}
+        textAlign="center"
+      >
         Featured Properties
       </Typography>
       <Box

@@ -2,6 +2,7 @@ import localFont from "@next/font/local";
 import Layout from "../components/layout/layout";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
+import '../styles/fonts.css'
 
 const theme = createTheme({
   palette: {

@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import About from "../components/home/about";
 import Banner from "../components/home/banner";
 import Contact from "../components/home/contact";

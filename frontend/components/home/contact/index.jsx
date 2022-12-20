@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 import localFont from "@next/font/local";
 import { Box, Container, Typography, Stack } from "@mui/material";
 import contactBg from "../../../public/assets/images/flower-pink-bg.png";
@@ -26,7 +26,16 @@ const Contact = (props) => {
           padding: "100px",
         }}
       >
-        <Typography variant="h2" mb={5} sx={{ fontSize: {md: "5em"} }}className={Rockness.className}>Connect With Us</Typography>
+        <Typography
+          variant="h2"
+          mb={5}
+          sx={{
+            fontSize: { md: "5em" },
+            fontFamily: "Rockness, Arial, Roboto",
+          }}
+        >
+          Connect With Us
+        </Typography>
         <Box
           sx={{
             borderRadius: "50%",
@@ -50,9 +59,20 @@ const Contact = (props) => {
               textAlign: "center",
             }}
           >
-            <Typography variant="h6" sx={{ marginBottom: "10px" }}>36 Jennnings Way.<br/>Westport,MA <br/>02790</Typography>
-            <Typography variant="h6" sx={{ marginBottom: "10px" }}><Link href="mailto:blhernandez0923@gmail.com">blhernandez0923@gmail.com</Link></Typography>
-            <Typography variant="h6" sx={{ marginBottom: "10px" }}>774.888.8571</Typography>
+            <Typography variant="h6" sx={{ marginBottom: "10px" }}>
+              36 Jennnings Way.
+              <br />
+              Westport,MA <br />
+              02790
+            </Typography>
+            <Typography variant="h6" sx={{ marginBottom: "10px" }}>
+              <Link href="mailto:blhernandez0923@gmail.com">
+                blhernandez0923@gmail.com
+              </Link>
+            </Typography>
+            <Typography variant="h6" sx={{ marginBottom: "10px" }}>
+              774.888.8571
+            </Typography>
           </Stack>
         </Box>
       </Container>

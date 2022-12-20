@@ -13,7 +13,7 @@ const About = () => {
     <Box
       sx={{
         background: `url(${bg.src})`,
-        height: { md: "100vh"},
+        height: { md: "100vh" },
         width: "100%",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -28,7 +28,14 @@ const About = () => {
         }}
       >
         <Box sx={{ zIndex: 2000, position: "relative" }}>
-          <Typography variant="h2" sx={{ marginBottom: "50px", fontSize: {md: "5em"} }} className={Rockness.className}>
+          <Typography
+            variant="h2"
+            sx={{
+              marginBottom: "50px",
+              fontSize: { md: "5em" },
+              fontFamily: "Rockness, Arial, Roboto",
+            }}
+          >
             My Story
           </Typography>
           <Grid container>
