@@ -1,10 +1,11 @@
+import localFont from "@next/font/local";
 import { Carousel } from "react-responsive-carousel";
-
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 import { Box, Container, Typography, Stack, Avatar } from "@mui/material";
-
 import bg from "../../../public/assets/images/featured-properties/featured-properties-bg.png";
+const Rockness = localFont({
+  src: "../../../public/assets/fonts/Rockness.ttf",
+});
 
 const Testimonials = () => {
   return (
@@ -19,7 +20,7 @@ const Testimonials = () => {
     >
       <Container>
         <Typography variant="h3">What Our Clients</Typography>
-        <Typography variant="h2" sx={{ marginLeft: "10%" }}>
+        <Typography variant="h2" sx={{ marginLeft: "10%", fontSize: { md: "5em" } }} className={Rockness.className}>
           Are Saying About Us
         </Typography>
         <Box

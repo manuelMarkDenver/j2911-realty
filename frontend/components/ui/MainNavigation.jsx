@@ -96,11 +96,11 @@ const DrawerAppBar = (props) => {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: "none", sm: "block" }, color: "black" }}
               >
-                <Image src={logo} sx={{ height: "10px", width: "10px"}} />
+                
               </Typography>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
                 {navItems.map((item) => (
-                  <Button key={item} sx={{ color: "#fff" }}>
+                  <Button key={item} sx={{ color: "#000" }}>
                     {item}
                   </Button>
                 ))}

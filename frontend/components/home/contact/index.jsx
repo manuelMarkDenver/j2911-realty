@@ -1,7 +1,12 @@
+import Link from "next/link"
+import localFont from "@next/font/local";
 import { Box, Container, Typography, Stack } from "@mui/material";
 import contactBg from "../../../public/assets/images/flower-pink-bg.png";
+const Rockness = localFont({
+  src: "../../../public/assets/fonts/Rockness.ttf",
+});
 
-const Contact = () => {
+const Contact = (props) => {
   return (
     <Box
       sx={{
@@ -21,7 +26,7 @@ const Contact = () => {
           padding: "100px",
         }}
       >
-        <Typography variant="h2" mb={5}>Connect With Us</Typography>
+        <Typography variant="h2" mb={5} sx={{ fontSize: {md: "5em"} }}className={Rockness.className}>Connect With Us</Typography>
         <Box
           sx={{
             borderRadius: "50%",
@@ -45,9 +50,9 @@ const Contact = () => {
               textAlign: "center",
             }}
           >
-            <Typography variant="h5">36 Jennnings Way. Westport,MA 02790</Typography>
-            <Typography variant="h5">blhernandez0923@gmail.com</Typography>
-            <Typography variant="h5">774.888.8571</Typography>
+            <Typography variant="h6" sx={{ marginBottom: "10px" }}>36 Jennnings Way.<br/>Westport,MA <br/>02790</Typography>
+            <Typography variant="h6" sx={{ marginBottom: "10px" }}><Link href="mailto:blhernandez0923@gmail.com">blhernandez0923@gmail.com</Link></Typography>
+            <Typography variant="h6" sx={{ marginBottom: "10px" }}>774.888.8571</Typography>
           </Stack>
         </Box>
       </Container>

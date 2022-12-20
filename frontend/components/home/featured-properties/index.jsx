@@ -1,5 +1,8 @@
 import { useState } from "react";
-import Image from "next/image";
+import localFont from "@next/font/local";
+const Rockness = localFont({
+  src: "../../../public/assets/fonts/Rockness.ttf",
+});
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -40,7 +43,9 @@ const FeaturedProperties = () => {
         padding: "100px 0",
       }}
     >
-      <Typography variant="h2" textAlign="center">Featured Properties</Typography>
+      <Typography variant="h2" sx={{ fontSize: {md: "5em"} }}textAlign="center" className={Rockness.className}>
+        Featured Properties
+      </Typography>
       <Box
         sx={{
           display: "flex",

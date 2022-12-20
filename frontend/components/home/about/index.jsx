@@ -1,6 +1,10 @@
 import Image from "next/image";
+import localFont from "@next/font/local";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import bg from "../../../public/assets/images/featured-properties/featured-properties-bg.png";
+const Rockness = localFont({
+  src: "../../../public/assets/fonts/Rockness.ttf",
+});
 
 import circleImg from "../../../public/assets/brenda-circle.png";
 
@@ -24,7 +28,7 @@ const About = () => {
         }}
       >
         <Box sx={{ zIndex: 2000, position: "relative" }}>
-          <Typography variant="h2" sx={{ marginBottom: "50px" }}>
+          <Typography variant="h2" sx={{ marginBottom: "50px", fontSize: {md: "5em"} }} className={Rockness.className}>
             My Story
           </Typography>
           <Grid container>
