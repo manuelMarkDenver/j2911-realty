@@ -20,7 +20,14 @@ const Testimonials = () => {
     >
       <Container>
         <Typography variant="h3">What Our Clients</Typography>
-        <Typography variant="h2" sx={{ marginLeft: "10%", fontSize: { md: "5em" } }} className={Rockness.className}>
+        <Typography
+          variant="h2"
+          sx={{
+            marginLeft: "10%",
+            fontSize: { md: "5em" },
+            fontFamily: "Rockness, Arial, Roboto",
+          }}
+        >
           Are Saying About Us
         </Typography>
         <Box
@@ -114,7 +121,6 @@ const Testimonials = () => {
                   </Typography>
                 </Box>
               </Stack>
-              
             </Carousel>
           </Container>
         </Box>
