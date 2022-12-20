@@ -1,9 +1,4 @@
 import { useState } from "react";
-import localFont from "@next/font/local";
-const Rockness = localFont({
-  src: "../../../public/assets/fonts/Rockness.ttf",
-});
-
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
@@ -17,6 +12,7 @@ import {
   Modal,
 } from "@mui/material";
 import bg from "../../../public/assets/images/featured-properties/featured-properties-bg.png";
+import Image from "next/image";
 
 const FeaturedProperties = () => {
   const [open, setOpen] = useState(false);
@@ -34,6 +30,24 @@ const FeaturedProperties = () => {
     boxShadow: 24,
     p: 4,
   };
+
+  const carouselImagesNumber = 41;
+  let imagesArr = [];
+
+  const renderCarouselImages = () => {
+    for (let index = 1; index <= carouselImagesNumber; index++) {
+      imagesArr.push({
+        id: `img-${index}`,
+        src: `/assets/images/featured-properties/img-${index}.jpg`,
+        dsecription: "",
+      });
+    }
+    return imagesArr;
+  };
+
+  carouselImagesNumber !== 0 ? renderCarouselImages() : (imagesArr = []);
+
+  console.log({ imagesArr });
 
   return (
     <Container
@@ -59,22 +73,34 @@ const FeaturedProperties = () => {
         }}
       >
         <Stack direction="row" spacing={10} mb={10}>
-          <Avatar
-            alt="Carousel Image 1"
-            src="/assets/images/featured-properties/carousel-2.jpg"
-            sx={{ width: 300, height: 300 }}
-            onClick={handleOpen}
-          />
-          <Avatar
-            alt="Carousel Image 2"
-            src="/assets/images/featured-properties/carousel-2.jpg"
-            sx={{ width: 300, height: 300 }}
-          />
-          <Avatar
-            alt="Carousel Image 3"
-            src="/assets/images/featured-properties/carousel-2.jpg"
-            sx={{ width: 300, height: 300 }}
-          />
+          <Box sx={{  display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+            <Avatar
+              alt="Carousel Image 1"
+              src="/assets/images/featured-properties/img-4.jpg"
+              variant="circular"
+              sx={{  width: "300px", height: "300px", marginBottom: "30px" }}
+              onClick={handleOpen}
+            />
+            <Typography variant="h5" textAlign="center">Property 1</Typography>
+          </Box>
+          <Box sx={{  display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+            <Avatar
+              alt="Carousel Image 1"
+              src="/assets/images/featured-properties/img-4.jpg"
+              variant="circular"
+              sx={{  width: "300px", height: "300px", marginBottom: "30px" }}
+            />
+            <Typography variant="h5" textAlign="center">Property 1</Typography>
+          </Box>
+          <Box sx={{  display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+            <Avatar
+              alt="Carousel Image 1"
+              src="/assets/images/featured-properties/img-4.jpg"
+              variant="circular"
+              sx={{  width: "300px", height: "300px", marginBottom: "30px" }}
+            />
+            <Typography variant="h5" textAlign="center">Property 1</Typography>
+          </Box>
         </Stack>
       </Box>
       <Modal
@@ -84,19 +110,24 @@ const FeaturedProperties = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Carousel showArrows={true} infiniteLoop={true}>
-            <div>
-              <img src="assets/images/featured-properties/carousel-2.jpg" />
-              <p className="legend">Legend 1</p>
-            </div>
-            <div>
-              <img src="assets/images/featured-properties/carousel-5.jpg" />
-              <p className="legend">Legend 2</p>
-            </div>
-            <div>
-              <img src="assets/images/featured-properties/carousel-4.jpg" />
-              <p className="legend">Legend 3</p>
-            </div>
+          <Carousel
+            showArrows={true}
+            infiniteLoop={true}
+            showIndicators={false}
+            showThumbs={false}
+          >
+            {/* <Box>
+              <Image src="/assets/images/featured-properties/img-2.jpg" width={500} height={300}/>
+            </Box> */}
+            {imagesArr.length !== 0 ? (
+              imagesArr.map((img) => (
+                <Box>
+                  <img src={img.src} />
+                </Box>
+              ))
+            ) : (
+              <Typography>No images</Typography>
+            )}
           </Carousel>
         </Box>
       </Modal>
