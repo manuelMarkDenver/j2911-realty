@@ -63,15 +63,13 @@ const FeaturedProperties = () => {
           />
           <Avatar
             alt="Carousel Image 2"
-            src="/assets/images/featured-properties/carousel-5.jpg"
+            src="/assets/images/featured-properties/carousel-2.jpg"
             sx={{ width: 300, height: 300 }}
-            onClick={handleOpen}
           />
           <Avatar
             alt="Carousel Image 3"
-            src="/assets/images/featured-properties/carousel-4.jpg"
+            src="/assets/images/featured-properties/carousel-2.jpg"
             sx={{ width: 300, height: 300 }}
-            onClick={handleOpen}
           />
         </Stack>
       </Box>
