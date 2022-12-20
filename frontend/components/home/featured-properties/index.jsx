@@ -121,7 +121,7 @@ const FeaturedProperties = () => {
             </Box> */}
             {imagesArr.length !== 0 ? (
               imagesArr.map((img) => (
-                <Box>
+                <Box key={img.id}>
                   <img src={img.src} />
                 </Box>
               ))
